@@ -1,0 +1,61 @@
+Scanner scan=new Scanner(System.in);
+		System.out.println("Hosgeldiniz:) Iyi yolculuklar dileriz");
+		System.out.println("Yolculuk nere hemserim: " +"\n1-Köln"+ "\n2-Frankfurt");
+			
+		    	
+		    	MezarTurizm();
+	  
+		    	
+			}
+
+			private static void MezarTurizm() {
+				Scanner scan=new Scanner(System.in);
+				int islem=scan.nextInt();
+			   
+			    if (islem==1) {
+				    System.out.println("Rota Köln");
+				    System.out.println("Kac kisi gidiyorsunuz(Max iki kisi gidebilirsiniz!): ");
+				    int kisi=scan.nextInt();
+				    if (kisi!=2 ) {
+					System.out.println("Korona zamani bu ne kalabalik. Size bilet veremeyiz");
+				     return;
+				    }
+	                System.out.println("Kac km yapmayi planliyorsunuz(Koln): ");
+	                double kmKoln=scan.nextDouble();
+	                System.out.println("Toplam bakiyeniz kac € : ");
+				    int bakiye=scan.nextInt();
+				    double kalan=bakiye-kmKoln/20*5;
+	                if (kisi==2) {
+					System.out.println("Yolculuk tutari Köln 2 kisi icin : " + ((kmKoln/20)*10) + "€");
+					double sonkalan=bakiye-kmKoln/20*10;
+					System.out.println("Yolculuga cikmaniz durumunda kalan bakiyeniz : " + sonkalan);
+				}else {
+                       System.out.println("Gecersiz islem");
+				}
+	                
+				}	
+                
+				
+				if (islem==2) {
+					System.out.println("Rota Frankfurt");
+				System.out.println("Kac kisi gidiyorsunuz(Max iki kisi gidebilirsiniz!): ");
+				int kisif=scan.nextInt();
+				if (kisif!=2 ) {
+					 System.out.println("Korona zamani bu ne kalabalik. Size bilet veremeyiz");
+					return; 
+				}
+				System.out.println("Kac km yapmayi planliyorsunuz(Frank): ");
+				double kmFrank=scan.nextDouble();
+				System.out.println("Toplam bakiyeniz kac € : ");
+			    int bakiye=scan.nextInt();
+			    double kalan=bakiye-kmFrank/20*5;		
+				 if (kisif<=2) {
+					System.out.println("Yolculuk tutari Frankfurt 2 kisi icin : " + ((kmFrank/20)*10) + "€");
+					double sonkalan=bakiye-kmFrank/20*10;
+					System.out.println("Yolculuga cikmaniz durumunda kalan bakiyeniz : " + sonkalan);
+				 }	
+					else {
+				      System.out.println("Gitmiceniz mi? Gecerli bir deger giriniz lutfen... ");
+				}
+				
+					
